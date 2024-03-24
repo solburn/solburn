@@ -60,7 +60,7 @@
   width: 22px;
   height: 16px;
 
-  background-image: url('./../image/discord.svg');
+  background-image: url('./../../image/discord.svg');
 }
 
 .tviter {
@@ -68,5 +68,5 @@
   height: 16px;
   opacity: 0px;
 
-  background-image: url('./../image/tviter.svg');
+  background-image: url('./../../image/tviter.svg');
 }
