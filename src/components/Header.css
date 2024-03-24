@@ -1,0 +1,72 @@
+.header {
+  padding-top: 26px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.connect-button {
+  width: 291px;
+  height: 62px;
+  font-family: 'Orbitron', sans-serif;
+  color: white;
+  background: #686ffb;
+  border: 0;
+  border-radius: 40px;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 25.08px;
+  text-align: center;
+}
+
+.logo {
+  width: 134.33px;
+  height: 39px;
+}
+
+.header-text {
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 25.08px;
+  text-align: center;
+  padding-top: 44px;
+  padding-bottom: 34px;
+}
+
+.social-network-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 10px;
+  margin-top: 21px;
+  margin-bottom: 41px;
+}
+
+.social-network-list-item {
+}
+
+.social-network {
+  display: block;
+  background-repeat: no-repeat;
+  width: 50px;
+  height: 50px;
+  background-position: center;
+  background-size: contain;
+}
+
+.discord {
+  width: 22px;
+  height: 16px;
+
+  background-image: url('./../image/discord.svg');
+}
+
+.tviter {
+  width: 17px;
+  height: 16px;
+  opacity: 0px;
+
+  background-image: url('./../image/tviter.svg');
+}
