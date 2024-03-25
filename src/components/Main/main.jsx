@@ -1,3 +1,4 @@
+import Footer from '../Footer/Footer';
 import NFT from '../NFT/NFT';
 import Tockens from '../Tokens/Tockens';
 import './main.css';
@@ -9,6 +10,7 @@ const Main = () => {
         <Tockens />
         <NFT />
       </div>
+      <Footer />
     </div>
   );
 };

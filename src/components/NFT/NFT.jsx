@@ -1,20 +1,79 @@
 import { useState } from 'react';
 import Card from '../Card/Card';
 import './NFT.css';
-import cardImage from './../../image/CardImage.jpg';
+import cardImage from './../../image/NFT.png';
+import icon from './../../image/icon.svg';
 
 const NFT = () => {
   const [cardsNFT, setCardsNFT] = useState([
-    { image: cardImage, name: '$Anal Airdrop', info: '64y8...GNBW', price: '2 $Anal' },
-    { image: cardImage, name: '$Anal Airdrop', info: '64y8...GNBW', price: '2 $Anal' },
-    { image: cardImage, name: '$Anal Airdrop', info: '64y8...GNBW', price: '2 $Anal' },
-    { image: cardImage, name: '$Anal Airdrop', info: '64y8...GNBW', price: '2 $Anal' },
-    { image: cardImage, name: '$Anal Airdrop', info: '64y8...GNBW', price: '2 $Anal' },
-    { image: cardImage, name: '$Anal Airdrop', info: '64y8...GNBW', price: '2 $Anal' },
+    {
+      image: cardImage,
+      name: 'Jito Foundation',
+      info: '4c8A...pDLm',
+      price: 'Token',
+      icon: icon,
+    },
+    {
+      image: cardImage,
+      name: 'Jito Foundation',
+      info: '4c8A...pDLm',
+      price: 'Token',
+      icon: icon,
+    },
+    {
+      image: cardImage,
+      name: 'Jito Foundation',
+      info: '4c8A...pDLm',
+      price: 'Token',
+      icon: icon,
+    },
+    {
+      image: cardImage,
+      name: 'Jito Foundation',
+      info: '4c8A...pDLm',
+      price: 'Token',
+      icon: icon,
+    },
+    {
+      image: cardImage,
+      name: 'Jito Foundation',
+      info: '4c8A...pDLm',
+      price: 'Token',
+      icon: icon,
+    },
+    {
+      image: cardImage,
+      name: 'Jito Foundation',
+      info: '4c8A...pDLm',
+      price: 'Token',
+      icon: icon,
+    },
+    {
+      image: cardImage,
+      name: 'Jito Foundation',
+      info: '4c8A...pDLm',
+      price: 'Token',
+      icon: icon,
+    },
+    {
+      image: cardImage,
+      name: 'Jito Foundation',
+      info: '4c8A...pDLm',
+      price: 'Token',
+      icon: icon,
+    },
+    {
+      image: cardImage,
+      name: 'Jito Foundation',
+      info: '4c8A...pDLm',
+      price: 'Token',
+      icon: icon,
+    },
   ]);
 
   return (
     <div className="nft">
+      <h2 className="block-title block-title-nft">NFT</h2>
       <ul className="card-list">
         {cardsNFT.map((card, index) => (
           <li className="card-item">
@@ -24,6 +83,7 @@ const NFT = () => {
               name={card.name}
               info={card.info}
               price={card.price}
+              icon={card.icon}
             />
           </li>
         ))}

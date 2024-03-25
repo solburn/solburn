@@ -1,6 +1,7 @@
 .tockens {
-  max-width: 528px;
-  padding: 0 96px;
+  position: relative;
+  width: 528px;
+  padding: 0 5%;
 }
 
 .card-list {
@@ -9,9 +10,30 @@
   list-style: none;
   padding: 0;
   gap: 24px;
+  justify-content: center;
+  padding-bottom: 16px;
+  color: white;
 }
 
 .card-item {
   width: 160px;
   height: 221px;
+  padding-bottom: 16px;
+}
+
+.block-title {
+  position: absolute;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 50.16px;
+  text-align: center;
+  color: white;
+  width: 165px;
+  height: 29px;
+  top: -180px;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
 }

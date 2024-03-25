@@ -1,3 +1,5 @@
 .nft {
-  padding: 0 96px;
+  position: relative;
+  width: 528px;
+  padding: 0 5%;
 }

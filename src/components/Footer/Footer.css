@@ -1,0 +1,50 @@
+.footer {
+  margin: 0 91px;
+  margin-top: 132px;
+  background-color: #0c0c0d;
+  display: flex;
+  padding: 20px 50px;
+  border-radius: 120px;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 25.08px;
+  text-align: left;
+  color: white;
+  justify-content: space-between;
+}
+
+.confirm-button {
+  cursor: pointer;
+  position: relative;
+  width: 247px;
+  height: 62px;
+  font-family: 'Orbitron', sans-serif;
+  color: white;
+  background: #686ffb;
+  border: 0;
+  border-radius: 40px;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 25.08px;
+  text-align: center;
+}
+
+.queued {
+  position: relative;
+}
+
+.total {
+  display: block;
+  background-image: url('./../../image/iconCripto.svg');
+  background-position: right;
+  background-repeat: no-repeat;
+  padding-right: 37px;
+}
+
+.rectangle {
+  background-color: white;
+  height: 2px;
+  width: 15%;
+  margin: auto;
+  opacity: 0.3;
+}
