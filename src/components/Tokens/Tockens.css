@@ -23,13 +23,12 @@
 
 .block-title {
   position: absolute;
+  width: max-content;
   font-size: 40px;
   font-weight: 700;
   line-height: 50.16px;
   text-align: center;
   color: white;
-  width: 165px;
-  height: 29px;
   top: -180px;
   margin-left: auto;
   margin-right: auto;
@@ -42,5 +41,42 @@
   .card-item {
     width: 116px;
     padding-bottom: 0px;
+  }
+}
+
+.second-title {
+  display: none;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 50.16px;
+}
+
+@media (max-width: 660px) {
+  .block-title {
+    background-image: url('./../../image/Arrow.svg');
+    background-position: center right;
+    background-repeat: no-repeat;
+    padding-right: 15px;
+    cursor: pointer;
+    top: -170px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+  }
+
+  .second-title {
+    display: none;
+    position: absolute;
+    cursor: pointer;
+    top: -160px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: white;
+    opacity: 0.5;
   }
 }

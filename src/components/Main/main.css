@@ -9,6 +9,13 @@
   justify-content: space-around;
 }
 
+@media (max-width: 660px) {
+  .union {
+    background-image: url('./../../image/UnionMobile.svg');
+    margin-top: 50px;
+  }
+}
+
 .main-container {
   width: 100%;
 }

@@ -42,3 +42,13 @@
   width: 100%;
   border-radius: 20px;
 }
+
+.select-card {
+  box-shadow: inset 0 0 0 2000px rgba(255, 0, 150, 0.3);
+}
+
+@media (max-width: 660px) {
+  .card {
+    gap: 4px;
+  }
+}
