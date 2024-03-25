@@ -72,7 +72,7 @@ const NFT = () => {
   ]);
 
   return (
-    <div className="nft">
+    <div className="nft card-block">
       <h2 className="block-title block-title-nft">NFT</h2>
       <ul className="card-list">
         {cardsNFT.map((card, index) => (

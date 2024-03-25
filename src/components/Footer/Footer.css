@@ -1,9 +1,14 @@
 .footer {
-  margin: 0 91px;
+  width: 100%;
+}
+
+.footer-container {
+  margin: 0 5%;
   margin-top: 132px;
   background-color: #0c0c0d;
   display: flex;
-  padding: 20px 50px;
+  gap: 15px;
+  padding: 20px 25px;
   border-radius: 120px;
   font-size: 20px;
   font-weight: 700;
@@ -11,6 +16,7 @@
   text-align: left;
   color: white;
   justify-content: space-between;
+  align-items: center;
 }
 
 .confirm-button {
@@ -27,10 +33,13 @@
   font-weight: 700;
   line-height: 25.08px;
   text-align: center;
+  white-space: nowrap;
 }
 
 .queued {
   position: relative;
+  text-align: center;
+  white-space: nowrap;
 }
 
 .total {
@@ -38,13 +47,60 @@
   background-image: url('./../../image/iconCripto.svg');
   background-position: right;
   background-repeat: no-repeat;
-  padding-right: 37px;
+  padding-right: 36px;
+  text-align: center;
+  white-space: nowrap;
 }
 
 .rectangle {
   background-color: white;
   height: 2px;
-  width: 15%;
+  width: 11%;
   margin: auto;
   opacity: 0.3;
+}
+
+@media (max-width: 950px) {
+  .footer-container {
+    font-size: 18px;
+  }
+
+  .confirm-button {
+    font-size: 18px;
+  }
+
+  .total {
+    background-size: 20px;
+    padding-right: 30px;
+  }
+}
+
+@media (max-width: 800px) {
+  .footer-container {
+    font-size: 15px;
+  }
+
+  .confirm-button {
+    font-size: 15px;
+  }
+
+  .total {
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-container {
+    padding: 5px 20px;
+    font-size: 12px;
+  }
+
+  .confirm-button {
+    font-size: 12px;
+    height: 26px;
+  }
+
+  .total {
+    background-size: 15px;
+    padding-right: 20px;
+  }
 }

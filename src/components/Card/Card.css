@@ -1,6 +1,5 @@
 .card {
-  width: 160px;
-  height: 221px;
+  width: 100%;
   border: 1px 0px 0px 0px;
   display: flex;
   gap: 8px;
@@ -8,39 +7,38 @@
 }
 
 .card-name {
-  width: 153px;
-  height: 14px;
-  font-size: 16px;
+  font-size: clamp(0.75rem, 1.5vw, 1.2rem);
   font-weight: 700;
   line-height: 20.06px;
   text-align: left;
   margin: 0;
+  white-space: nowrap;
 }
 
 .card-info {
-  width: 90px;
-  height: 14px;
-  font-size: 12px;
+  font-size: clamp(0.5rem, 1.5vw, 0.75rem);
   font-weight: 700;
   line-height: 15.05px;
-  text-align: center;
   margin: 0;
   background-repeat: no-repeat;
   background-size: contain;
   background-position: left;
-  padding-left: 18px;
+  padding-left: 15%;
+  white-space: nowrap;
 }
 
 .card-price {
+  font-size: clamp(0.5rem, 1.5vw, 0.75rem);
   width: 54px;
   height: 9px;
-  font-size: 12px;
   font-weight: 700;
   line-height: 15.05px;
   text-align: left;
   margin: 0;
+  white-space: nowrap;
 }
 
 .card-image {
+  width: 100%;
   border-radius: 20px;
 }

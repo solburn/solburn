@@ -18,7 +18,7 @@ const Tockens = () => {
   ]);
 
   return (
-    <div className="tockens">
+    <div className="tockens card-block">
       <h2 className="block-title block-title-tockens">Tokens</h2>
       <ul className="card-list">
         {cardsToken.map((card, index) => (

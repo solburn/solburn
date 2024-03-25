@@ -1,6 +1,5 @@
-.tockens {
+.card-block {
   position: relative;
-  width: 528px;
   padding: 0 5%;
 }
 
@@ -16,8 +15,9 @@
 }
 
 .card-item {
-  width: 160px;
-  height: 221px;
+  max-width: 160px;
+  min-width: 116px;
+  width: 13vw;
   padding-bottom: 16px;
 }
 
@@ -36,4 +36,11 @@
   left: 0;
   right: 0;
   text-align: center;
+}
+
+@media (max-width: 440px) {
+  .card-item {
+    width: 116px;
+    padding-bottom: 0px;
+  }
 }
