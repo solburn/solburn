@@ -71,3 +71,16 @@
 
   background-image: url('./../../image/tviter.svg');
 }
+
+@media (max-width: 660px) {
+  .connect-button {
+    width: 209px;
+    height: 51px;
+  }
+
+  .header-text {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 17.56px;
+  }
+}
