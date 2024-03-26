@@ -8,15 +8,78 @@ import { Context } from '../../App';
 const Tockens = ({ refUnion }) => {
   const { selectList, setSelectList } = useContext(Context);
   const [cardsToken, setCardsToken] = useState([
-    { image: cardImage, name: '$Anal Airdrop', info: '64y8...GNBW', price: '2 $Anal', icon: icon },
-    { image: cardImage, name: '$Anal Airdrop', info: '64y8...GNBW', price: '2 $Anal', icon: icon },
-    { image: cardImage, name: '$Anal Airdrop', info: '64y8...GNBW', price: '2 $Anal', icon: icon },
-    { image: cardImage, name: '$Anal Airdrop', info: '64y8...GNBW', price: '2 $Anal', icon: icon },
-    { image: cardImage, name: '$Anal Airdrop', info: '64y8...GNBW', price: '2 $Anal', icon: icon },
-    { image: cardImage, name: '$Anal Airdrop', info: '64y8...GNBW', price: '2 $Anal', icon: icon },
-    { image: cardImage, name: '$Anal Airdrop', info: '64y8...GNBW', price: '2 $Anal', icon: icon },
-    { image: cardImage, name: '$Anal Airdrop', info: '64y8...GNBW', price: '2 $Anal', icon: icon },
-    { image: cardImage, name: '$Anal Airdrop', info: '64y8...GNBW', price: '2 $Anal', icon: icon },
+    {
+      image: cardImage,
+      name: '$Anal Airdrop',
+      info: '64y8...GNBW',
+      price: '2 $Anal',
+      icon: icon,
+      isNFT: false,
+    },
+    {
+      image: cardImage,
+      name: '$Anal Airdrop',
+      info: '64y8...GNBW',
+      price: '2 $Anal',
+      icon: icon,
+      isNFT: false,
+    },
+    {
+      image: cardImage,
+      name: '$Anal Airdrop',
+      info: '64y8...GNBW',
+      price: '2 $Anal',
+      icon: icon,
+      isNFT: false,
+    },
+    {
+      image: cardImage,
+      name: '$Anal Airdrop',
+      info: '64y8...GNBW',
+      price: '2 $Anal',
+      icon: icon,
+      isNFT: false,
+    },
+    {
+      image: cardImage,
+      name: '$Anal Airdrop',
+      info: '64y8...GNBW',
+      price: '2 $Anal',
+      icon: icon,
+      isNFT: false,
+    },
+    {
+      image: cardImage,
+      name: '$Anal Airdrop',
+      info: '64y8...GNBW',
+      price: '2 $Anal',
+      icon: icon,
+      isNFT: false,
+    },
+    {
+      image: cardImage,
+      name: '$Anal Airdrop',
+      info: '64y8...GNBW',
+      price: '2 $Anal',
+      icon: icon,
+      isNFT: false,
+    },
+    {
+      image: cardImage,
+      name: '$Anal Airdrop',
+      info: '64y8...GNBW',
+      price: '2 $Anal',
+      icon: icon,
+      isNFT: false,
+    },
+    {
+      image: cardImage,
+      name: '$Anal Airdrop',
+      info: '64y8...GNBW',
+      price: '2 $Anal',
+      icon: icon,
+      isNFT: false,
+    },
   ]);
   const refSecondTitle = useRef();
   const refMainTitle = useRef();
@@ -50,11 +113,13 @@ const Tockens = ({ refUnion }) => {
           <li className="card-item">
             <Card
               key={`Token-${index}`}
+              id={`Token-${index}`}
               image={card.image}
               name={card.name}
               info={card.info}
               price={card.price}
               icon={card.icon}
+              isNFT={card.isNFT}
             />
           </li>
         ))}

@@ -14,6 +14,7 @@ const NFT = ({ refUnion }) => {
       info: '4c8A...pDLm',
       price: 'Token',
       icon: icon,
+      isNFT: true,
     },
     {
       image: cardImage,
@@ -21,6 +22,7 @@ const NFT = ({ refUnion }) => {
       info: '4c8A...pDLm',
       price: 'Token',
       icon: icon,
+      isNFT: true,
     },
     {
       image: cardImage,
@@ -28,6 +30,7 @@ const NFT = ({ refUnion }) => {
       info: '4c8A...pDLm',
       price: 'Token',
       icon: icon,
+      isNFT: true,
     },
     {
       image: cardImage,
@@ -35,6 +38,7 @@ const NFT = ({ refUnion }) => {
       info: '4c8A...pDLm',
       price: 'Token',
       icon: icon,
+      isNFT: true,
     },
     {
       image: cardImage,
@@ -42,6 +46,7 @@ const NFT = ({ refUnion }) => {
       info: '4c8A...pDLm',
       price: 'Token',
       icon: icon,
+      isNFT: true,
     },
     {
       image: cardImage,
@@ -49,6 +54,7 @@ const NFT = ({ refUnion }) => {
       info: '4c8A...pDLm',
       price: 'Token',
       icon: icon,
+      isNFT: true,
     },
     {
       image: cardImage,
@@ -56,6 +62,7 @@ const NFT = ({ refUnion }) => {
       info: '4c8A...pDLm',
       price: 'Token',
       icon: icon,
+      isNFT: true,
     },
     {
       image: cardImage,
@@ -63,6 +70,7 @@ const NFT = ({ refUnion }) => {
       info: '4c8A...pDLm',
       price: 'Token',
       icon: icon,
+      isNFT: true,
     },
     {
       image: cardImage,
@@ -70,6 +78,7 @@ const NFT = ({ refUnion }) => {
       info: '4c8A...pDLm',
       price: 'Token',
       icon: icon,
+      isNFT: true,
     },
   ]);
   const refSecondTitle = useRef();
@@ -103,12 +112,14 @@ const NFT = ({ refUnion }) => {
         {cardsNFT.map((card, index) => (
           <li className="card-item">
             <Card
-              key={`Token-${index}`}
+              key={`NFT-${index}`}
+              id={`NFT-${index}`}
               image={card.image}
               name={card.name}
               info={card.info}
               price={card.price}
               icon={card.icon}
+              isNFT={card.isNFT}
             />
           </li>
         ))}

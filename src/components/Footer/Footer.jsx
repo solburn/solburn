@@ -1,12 +1,14 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import './Footer.css';
 import iconCripto from './../../image/iconCripto.svg';
+import { Context } from '../../App';
 
 const Footer = () => {
+  const { markeds } = useContext(Context);
   return (
     <div className="footer">
       <div className="footer-container">
-        <p className="queued">1 item queued</p>
+        <p className="queued">{markeds.length} item queued</p>
         <div className="rectangle"></div>
         <p className="total">Total: 0,002</p>
         <div className="rectangle"></div>

@@ -91,7 +91,28 @@
 @media (max-width: 600px) {
   .footer-container {
     padding: 5px 20px;
+    font-size: 12px;
+    gap: 10px;
+  }
+
+  .confirm-button {
+    font-size: 12px;
+    height: 26px;
+  }
+
+  .total {
+    background-size: 12px;
+    padding-right: 15px;
+    background-position: right 7px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 450px) {
+  .footer-container {
+    padding: 5px 5px;
     font-size: 8px;
+    gap: 5px;
   }
 
   .confirm-button {
