@@ -55,7 +55,7 @@
   font-weight: 700;
   line-height: 28.84px;
   text-align: center;
-  font-size: clamp(1rem, 1.55vw, 1.6rem);
+  font-size: clamp(1.12rem, 2.25vw, 1.45rem);
   padding: 30% 6%;
   background: #686ffbc3;
   border-radius: 20px;

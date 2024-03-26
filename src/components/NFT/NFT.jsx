@@ -6,7 +6,7 @@ import icon from './../../image/icon.svg';
 import { Context } from '../../App';
 
 const NFT = ({ refUnion }) => {
-  const { selectList, setSelectList } = useContext(Context);
+  const { selectList, setSelectList, windowWidth } = useContext(Context);
   const [cardsNFT, setCardsNFT] = useState([
     {
       image: cardImage,
@@ -102,7 +102,10 @@ const NFT = ({ refUnion }) => {
 
   return (
     <div className="nft card-block">
-      <h2 ref={refMainTitle} onClick={openChange} className="block-title block-title-nft">
+      <h2
+        ref={refMainTitle}
+        onClick={() => windowWidth <= 660 && openChange()}
+        className="block-title block-title-nft">
         NFT
       </h2>
       <h3 ref={refSecondTitle} onClick={() => setSelectList('Tokens')} className="second-title">

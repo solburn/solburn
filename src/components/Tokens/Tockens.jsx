@@ -6,7 +6,7 @@ import Card from '../Card/Card';
 import { Context } from '../../App';
 
 const Tockens = ({ refUnion }) => {
-  const { selectList, setSelectList } = useContext(Context);
+  const { selectList, setSelectList, windowWidth } = useContext(Context);
   const [cardsToken, setCardsToken] = useState([
     {
       image: cardImage,
@@ -102,7 +102,10 @@ const Tockens = ({ refUnion }) => {
 
   return (
     <div className="tockens card-block">
-      <h2 ref={refMainTitle} onClick={openChange} className="block-title block-title-tockens">
+      <h2
+        ref={refMainTitle}
+        onClick={() => windowWidth <= 660 && openChange()}
+        className="block-title block-title-tockens">
         Tokens
       </h2>
       <h3 ref={refSecondTitle} onClick={() => setSelectList('NFT')} className="second-title">
