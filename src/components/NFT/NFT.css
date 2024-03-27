@@ -1,1 +1,10 @@
+.nft {
+  border-left: 2px solid;
+  border-image: linear-gradient(to bottom, #d3d4de, #303134) 1;
+}
 
+@media (max-width: 660px) {
+  .nft {
+    border-left: none;
+  }
+}

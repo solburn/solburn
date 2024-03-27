@@ -1,11 +1,11 @@
 .app-container {
   position: relative;
   z-index: 1;
-  overflow: hidden; /*if you want to crop the image*/
+  overflow: hidden;
   width: 100%;
   height: 100%;
   padding-bottom: 25px;
-  background-color: #141518;
+  background-color: #111214;
 }
 
 .app-container::before {
@@ -16,9 +16,9 @@
   bottom: 0;
   content: '';
   opacity: 0.4;
-  background: radial-gradient(circle at center top, #686ffb 10%, rgba(255, 255, 255, 0) 30%),
-    radial-gradient(circle at center left, #686ffb 10%, rgba(255, 255, 255, 0) 30%),
-    radial-gradient(circle at right bottom, #686ffb 10%, rgba(255, 255, 255, 0) 30%),
+  background: radial-gradient(circle at center top, #686ffb 150px, rgba(255, 255, 255, 0) 500px),
+    radial-gradient(circle at center left, #686ffb 150px, rgba(255, 255, 255, 0) 500px),
+    radial-gradient(circle at right bottom, #686ffb 150px, rgba(255, 255, 255, 0) 500px),
     url('./image/BubbleBottom.png') center bottom,
     url('./image/BubbleTopLeft.png') left top no-repeat,
     url('./image/BubbleTopRight.png') right top no-repeat;

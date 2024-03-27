@@ -5,88 +5,23 @@ import icon from './../../image/icon.svg';
 import Card from '../Card/Card';
 import { Context } from '../../App';
 
-const Tockens = ({ refUnion }) => {
+const Tockens = ({ tokens, refUnion }) => {
   const { selectList, setSelectList, windowWidth } = useContext(Context);
-  const [cardsToken, setCardsToken] = useState([
-    {
-      image: cardImage,
-      name: '$Anal Airdrop',
-      info: '64y8...GNBW',
-      price: '2 $Anal',
-      icon: icon,
-      isNFT: false,
-    },
-    {
-      image: cardImage,
-      name: '$Anal Airdrop',
-      info: '64y8...GNBW',
-      price: '2 $Anal',
-      icon: icon,
-      isNFT: false,
-    },
-    {
-      image: cardImage,
-      name: '$Anal Airdrop',
-      info: '64y8...GNBW',
-      price: '2 $Anal',
-      icon: icon,
-      isNFT: false,
-    },
-    {
-      image: cardImage,
-      name: '$Anal Airdrop',
-      info: '64y8...GNBW',
-      price: '2 $Anal',
-      icon: icon,
-      isNFT: false,
-    },
-    {
-      image: cardImage,
-      name: '$Anal Airdrop',
-      info: '64y8...GNBW',
-      price: '2 $Anal',
-      icon: icon,
-      isNFT: false,
-    },
-    {
-      image: cardImage,
-      name: '$Anal Airdrop',
-      info: '64y8...GNBW',
-      price: '2 $Anal',
-      icon: icon,
-      isNFT: false,
-    },
-    {
-      image: cardImage,
-      name: '$Anal Airdrop',
-      info: '64y8...GNBW',
-      price: '2 $Anal',
-      icon: icon,
-      isNFT: false,
-    },
-    {
-      image: cardImage,
-      name: '$Anal Airdrop',
-      info: '64y8...GNBW',
-      price: '2 $Anal',
-      icon: icon,
-      isNFT: false,
-    },
-    {
-      image: cardImage,
-      name: '$Anal Airdrop',
-      info: '64y8...GNBW',
-      price: '2 $Anal',
-      icon: icon,
-      isNFT: false,
-    },
-  ]);
   const refSecondTitle = useRef();
   const refMainTitle = useRef();
+  const [visibleTokens, setVisibleTokens] = useState(9);
 
   useEffect(() => {
     openChange();
   }, []);
+
+  useEffect(() => {
+    if (windowWidth >= 660) {
+      refSecondTitle.current.style.display = 'none';
+      refMainTitle.current.style.top = '-170px';
+      refUnion.current.style.marginTop = '50px';
+    }
+  }, [windowWidth]);
 
   const openChange = () => {
     if (refSecondTitle.current.style.display === 'none') {
@@ -100,6 +35,20 @@ const Tockens = ({ refUnion }) => {
     }
   };
 
+  const handleScroll = () => {
+    const bottom =
+      Math.ceil(window.innerHeight + window.scrollY) >= document.documentElement.scrollHeight;
+
+    if (bottom) {
+      setVisibleTokens((prevVisibleTokens) => prevVisibleTokens + 9);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <div className="tockens card-block">
       <h2
@@ -112,18 +61,9 @@ const Tockens = ({ refUnion }) => {
         NFT
       </h3>
       <ul className="card-list">
-        {cardsToken.map((card, index) => (
-          <li className="card-item">
-            <Card
-              key={`Token-${index}`}
-              id={`Token-${index}`}
-              image={card.image}
-              name={card.name}
-              info={card.info}
-              price={card.price}
-              icon={card.icon}
-              isNFT={card.isNFT}
-            />
+        {tokens.slice(0, visibleTokens).map((token, index) => (
+          <li className="card-item" key={`Token-${index}`}>
+            <Card id={`Token-${index}`} token={token} isNFT={false} />
           </li>
         ))}
       </ul>

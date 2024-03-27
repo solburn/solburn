@@ -12,7 +12,6 @@
   line-height: 20.06px;
   text-align: left;
   margin: 0;
-  white-space: nowrap;
 }
 
 .card-info {
@@ -24,7 +23,8 @@
   background-size: contain;
   background-position: left;
   padding-left: 15%;
-  white-space: nowrap;
+  text-decoration: none;
+  color: white;
 }
 
 .card-price {
@@ -55,7 +55,7 @@
   font-weight: 700;
   line-height: 28.84px;
   text-align: center;
-  font-size: clamp(1.12rem, 2.25vw, 1.45rem);
+  font-size: clamp(1rem, 1.9vw, 1.45rem);
   padding: 30% 6%;
   background: #686ffbc3;
   border-radius: 20px;

@@ -1,6 +1,7 @@
 .card-block {
   position: relative;
   padding: 0 5%;
+  width: 50%;
 }
 
 .card-list {
@@ -52,6 +53,10 @@
 }
 
 @media (max-width: 660px) {
+  .card-block {
+    width: auto;
+  }
+
   .block-title {
     background-image: url('./../../image/Arrow.svg');
     background-position: center right;

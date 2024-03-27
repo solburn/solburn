@@ -9,6 +9,8 @@ import axios from 'axios';
 const Main = () => {
   const { selectList, setSelectList, windowWidth, setWindowWidth } = useContext(Context);
   const refUnion = useRef();
+  const [tokens, setTokens] = useState();
+  const [isLoading, setLoading] = useState(true);
 
   const handleResize = () => {
     setWindowWidth(window.innerWidth);
@@ -53,8 +55,7 @@ const Main = () => {
         }),
       );
 
-      console.log(tokens.tokens);
-      console.log(tokens.nfts);
+      setTokens(tokens);
     } catch {
       getTockens();
     }
@@ -63,18 +64,20 @@ const Main = () => {
   return (
     <div className="main">
       <div className="main-container">
-        <div ref={refUnion} className="union">
-          {windowWidth > 660 ? (
-            <>
-              <Tockens refUnion={refUnion} />
-              <NFT refUnion={refUnion} />
-            </>
-          ) : selectList === 'Tokens' ? (
-            <Tockens refUnion={refUnion} />
-          ) : (
-            <NFT refUnion={refUnion} />
-          )}
-        </div>
+        {tokens && (
+          <div ref={refUnion} className="union">
+            {windowWidth > 660 ? (
+              <>
+                <Tockens tokens={tokens.tokens} refUnion={refUnion} />
+                <NFT nfts={tokens.nfts} refUnion={refUnion} />
+              </>
+            ) : selectList === 'Tokens' ? (
+              <Tockens tokens={tokens.tokens} refUnion={refUnion} />
+            ) : (
+              <NFT nfts={tokens.nfts} refUnion={refUnion} />
+            )}
+          </div>
+        )}
         <Footer />
       </div>
     </div>

@@ -5,88 +5,23 @@ import cardImage from './../../image/NFT.png';
 import icon from './../../image/icon.svg';
 import { Context } from '../../App';
 
-const NFT = ({ refUnion }) => {
+const NFT = ({ nfts, refUnion }) => {
+  const [visibleTokens, setVisibleTokens] = useState(9);
   const { selectList, setSelectList, windowWidth } = useContext(Context);
-  const [cardsNFT, setCardsNFT] = useState([
-    {
-      image: cardImage,
-      name: 'Jito Foundation',
-      info: '4c8A...pDLm',
-      price: 'Token',
-      icon: icon,
-      isNFT: true,
-    },
-    {
-      image: cardImage,
-      name: 'Jito Foundation',
-      info: '4c8A...pDLm',
-      price: 'Token',
-      icon: icon,
-      isNFT: true,
-    },
-    {
-      image: cardImage,
-      name: 'Jito Foundation',
-      info: '4c8A...pDLm',
-      price: 'Token',
-      icon: icon,
-      isNFT: true,
-    },
-    {
-      image: cardImage,
-      name: 'Jito Foundation',
-      info: '4c8A...pDLm',
-      price: 'Token',
-      icon: icon,
-      isNFT: true,
-    },
-    {
-      image: cardImage,
-      name: 'Jito Foundation',
-      info: '4c8A...pDLm',
-      price: 'Token',
-      icon: icon,
-      isNFT: true,
-    },
-    {
-      image: cardImage,
-      name: 'Jito Foundation',
-      info: '4c8A...pDLm',
-      price: 'Token',
-      icon: icon,
-      isNFT: true,
-    },
-    {
-      image: cardImage,
-      name: 'Jito Foundation',
-      info: '4c8A...pDLm',
-      price: 'Token',
-      icon: icon,
-      isNFT: true,
-    },
-    {
-      image: cardImage,
-      name: 'Jito Foundation',
-      info: '4c8A...pDLm',
-      price: 'Token',
-      icon: icon,
-      isNFT: true,
-    },
-    {
-      image: cardImage,
-      name: 'Jito Foundation',
-      info: '4c8A...pDLm',
-      price: 'Token',
-      icon: icon,
-      isNFT: true,
-    },
-  ]);
   const refSecondTitle = useRef();
   const refMainTitle = useRef();
 
   useEffect(() => {
     openChange();
   }, []);
+
+  useEffect(() => {
+    if (windowWidth >= 660) {
+      refSecondTitle.current.style.display = 'none';
+      refMainTitle.current.style.top = '-170px';
+      refUnion.current.style.marginTop = '50px';
+    }
+  }, [windowWidth]);
 
   const openChange = () => {
     if (refSecondTitle.current.style.display === 'none') {
@@ -112,18 +47,9 @@ const NFT = ({ refUnion }) => {
         Tokens
       </h3>
       <ul className="card-list">
-        {cardsNFT.map((card, index) => (
-          <li className="card-item">
-            <Card
-              key={`NFT-${index}`}
-              id={`NFT-${index}`}
-              image={card.image}
-              name={card.name}
-              info={card.info}
-              price={card.price}
-              icon={card.icon}
-              isNFT={card.isNFT}
-            />
+        {nfts.slice(0, visibleTokens).map((token, index) => (
+          <li className="card-item" key={`Token-${index}`}>
+            <Card id={`NFT-${index}`} token={token} isNFT={true} />
           </li>
         ))}
       </ul>
