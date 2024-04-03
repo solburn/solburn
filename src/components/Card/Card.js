@@ -1,4 +1,5 @@
 import { useEffect, useContext, useState, useRef } from 'react';
+import React from 'react';
 import './Card.css';
 import { Context } from '../../App';
 import icon from './../../image/icon.svg';
@@ -10,10 +11,6 @@ const Card = ({ id, token, isNFT }) => {
   const [image, setImage] = useState();
   const [isMarked, setIsMarked] = useState(false);
   const refMarker = useRef();
-
-  useEffect(() => {
-    console.log(markeds);
-  }, [markeds]);
 
   async function func(mint) {
     try {
@@ -88,7 +85,8 @@ const Card = ({ id, token, isNFT }) => {
       <p className="card-name">{token?.name || 'Unknown'}</p>
       <a
         target="_blank"
-        href="solscan.io/token/HZ1JovNiVvGrGNiiYvEozEVgZ58xaU3RKwX8eACQBCt3"
+        rel='noreferrer'
+        href={`https://solscan.io/token/${token.mint}`}
         className="card-info"
         style={{ backgroundImage: `url(${icon})` }}>
         {token && token.mint ? token.mint.slice(0, 4) + '...' + token.mint.slice(-4) : 'Unknown'}{' '}

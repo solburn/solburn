@@ -1,15 +1,16 @@
-import { useState, useEffect, useContext, useRef } from 'react';
-import Card from '../Card/Card';
-import './NFT.css';
-import cardImage from './../../image/NFT.png';
+import { useEffect, useRef, useState, useContext } from 'react';
+import React from 'react';
+import './Tockens.css';
+import cardImage from './../../image/CardImage.jpg';
 import icon from './../../image/icon.svg';
+import Card from '../Card/Card';
 import { Context } from '../../App';
 
-const NFT = ({ nfts, refUnion }) => {
-  const [visibleTokens, setVisibleTokens] = useState(9);
+const Tockens = ({ tokens, refUnion }) => {
   const { selectList, setSelectList, windowWidth } = useContext(Context);
   const refSecondTitle = useRef();
   const refMainTitle = useRef();
+  const [visibleTokens, setVisibleTokens] = useState(9);
 
   useEffect(() => {
     openChange();
@@ -35,21 +36,36 @@ const NFT = ({ nfts, refUnion }) => {
     }
   };
 
+  const handleScroll = () => {
+    const bottom =
+      Math.ceil(window.innerHeight + window.scrollY) >= document.documentElement.scrollHeight;
+
+    if (bottom) {
+      setVisibleTokens((prevVisibleTokens) => prevVisibleTokens + 9);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <div className="nft card-block">
+    <div className="tockens card-block">
       <h2
         ref={refMainTitle}
         onClick={() => windowWidth <= 660 && openChange()}
-        className="block-title block-title-nft">
-        NFT
-      </h2>
-      <h3 ref={refSecondTitle} onClick={() => setSelectList('Tokens')} className="second-title">
+        className="block-title block-title-tockens">
         Tokens
+        <img src='/Arrow.svg' className='block-title-arrow'></img>
+      </h2>
+      <h3 ref={refSecondTitle} onClick={() => setSelectList('NFT')} className="second-title">
+        NFT
       </h3>
       <ul className="card-list">
-        {nfts.slice(0, visibleTokens).map((token, index) => (
+        {tokens.slice(0, visibleTokens).map((token, index) => (
           <li className="card-item" key={`Token-${index}`}>
-            <Card id={`NFT-${index}`} token={token} isNFT={true} />
+            <Card id={`Token-${index}`} token={token} isNFT={false} />
           </li>
         ))}
       </ul>
@@ -57,4 +73,4 @@ const NFT = ({ nfts, refUnion }) => {
   );
 };
 
-export default NFT;
+export default Tockens;

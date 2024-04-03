@@ -16,6 +16,10 @@
   }
 }
 
+.main {
+  min-height: 800px;
+}
+
 .main-container {
   width: 100%;
   position: relative;

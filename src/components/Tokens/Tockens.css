@@ -10,7 +10,7 @@
   list-style: none;
   padding: 0;
   gap: 24px;
-  justify-content: center;
+  justify-content: flex-start;
   padding-bottom: 16px;
   color: white;
 }
@@ -36,6 +36,11 @@
   left: 0;
   right: 0;
   text-align: center;
+}
+
+.block-title-arrow {
+  display: none;
+  padding-left: 12px;
 }
 
 @media (max-width: 440px) {
@@ -69,6 +74,13 @@
     left: 0;
     right: 0;
     text-align: center;
+    display: flex;
+    align-items: center;
+  }
+
+  .block-title-arrow {
+    display: block;
+    padding-left: 12px;
   }
 
   .second-title {
