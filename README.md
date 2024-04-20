@@ -1,11 +1,11 @@
 
 # SolBurn
-Source code for the site https://solburn.app
+Source code for the site https://solburner.org
 
 Solburn is a web-based platform designed to conveniently and securely burn junk tokens and non-fungible tokens (NFTs) on the Solana blockchain.
 
-**Our site:**: https://solburn.app
-**Twitter**: https://solburn.app
+**Our site:**: https://solburner.org
+**Twitter**: https://twitter.com/solburnapp
 **Discord**: https://discord.gg/JvhSK4YxjY
 
 
